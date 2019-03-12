@@ -1,0 +1,11 @@
+.login-body {
+  background: url("~src/assets/login-screen-image/login-screen-mountain.jpg") no-repeat center center fixed;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.login-card {
+  margin-top: 50px;
+}

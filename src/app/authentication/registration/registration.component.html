@@ -1,3 +1,20 @@
-<p>
-  registration works!
-</p>
+<div class="authentication-title">
+  <h3>Registration</h3>
+</div>
+<div class="form-group">
+  <label for="email">Email address</label>
+  <input type="email" class="form-control" [class.is-invalid]="isEmailError" id="email" placeholder="Enter email">
+  <div *ngIf="isEmailError" class="invalid-feedback">{{EMAIL_ERROR_MESSAGE}}</div>
+</div>
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" class="form-control" [class.is-invalid]="isPasswordError" id="password" placeholder="Enter password">
+  <div *ngIf="isPasswordError" class="invalid-feedback">{{PASSWORD_ERROR_MESSAGE}}</div>
+</div>
+<div class="form-group">
+  <label for="repeated-password">Confirm password</label>
+  <input type="password" class="form-control" [class.is-invalid]="isRepeatedPasswordError" id="repeated-password" placeholder="Enter password again">
+  <div *ngIf="isRepeatedPasswordError" class="invalid-feedback">{{REPEATED_PASSWORD_ERROR_MESSAGE}}</div>
+</div>
+<p>Already have an account? <a routerLink="../authorization">Sign in</a></p>
+<button class="btn btn-primary" (click)="validate()">Sign up</button>
